@@ -1,0 +1,19 @@
+{
+    "Food": [
+        {
+            "Date": "2026-09-14",
+            "Name": "Dinner",
+            "Amount": 1000.0
+        },
+        {
+            "Date": "2026-09-14",
+            "Name": "test expense",
+            "Amount": 4500.0
+        },
+        {
+            "Date": "2026-09-15",
+            "Name": "Lunch",
+            "Amount": 600.0
+        }
+    ]
+}
