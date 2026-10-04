@@ -23,7 +23,7 @@ The application allows users to record, view, edit, and delete expenses, create 
 * View budgets by month
 * View budgets by category
 * Modify existing budgets
-* Delete budgets
+* Delete existing budgets
 * Validate budget categories, months, years, and amounts
 * Store budget data in MySQL
 
@@ -52,7 +52,6 @@ Expense-and-Budget-Management/
 ├── Expense.py       # Expense and ExpenseManager classes
 ├── Budget.py        # Budget and BudgetManager classes
 ├── database.py      # MySQL database connection
-├── test_db.py       # Database connection testing
 ├── .gitignore       # Files and folders ignored by Git
 └── README.md        # Project documentation
 ```
@@ -95,7 +94,13 @@ Expense_and_Budget_Manager
 
 Create the required `Expense` and `Budget` tables according to the project's database schema.
 
-Update the MySQL connection details in `database.py` with your local MySQL credentials.
+Update the MySQL connection settings in `database.py` and provide the password through the `MYSQL_PASSWORD` environment variable.
+
+For example, in PowerShell:
+
+```powershell
+$env:MYSQL_PASSWORD="YOUR_MYSQL_PASSWORD"
+```
 
 ### 5. Run the application
 
@@ -109,4 +114,34 @@ The application uses **MySQL** for persistent data storage.
 
 Expense and budget information is stored in the MySQL database rather than local JSON files.
 
-The application connects to the database through `database.py`, while `ExpenseManager` and `BudgetManager` perform the req
+The application connects to the database through `database.py`, while `ExpenseManager` and `BudgetManager` perform the required database operations.
+
+## Budget Notifications
+
+The budget manager uses a configurable notification threshold.
+
+When spending reaches or exceeds the configured threshold, the application displays a warning.
+
+If spending exceeds the allocated budget, an alert is displayed.
+
+## Project Status
+
+**Completed**
+
+The core expense management, budget management, MySQL persistence, budget tracking, notifications, input validation, transaction handling, and dataflow have been implemented and tested.
+
+## Future Improvements
+
+Possible improvements for future versions include:
+
+* Improved command-line interface
+* More detailed spending reports
+* Expense search and filtering
+* Graphs and visualizations
+* Exporting reports
+* Improved automated test coverage
+* Additional database features
+
+## Author
+
+**G.Sri Bhargava**
